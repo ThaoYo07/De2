@@ -7,23 +7,26 @@ int luong(int a,int b ){
 int main() {
     int a, b;
     int (*luongThang13)();
-    luongThang13 = luong;
     printf("So nam kinh nghiem cho cong ty la:");
     scanf("%d", &a);
     printf("So nam lam viec cho cong ty la:");
     scanf("%d", &b);
     if (a < 2 && b < 1){
         printf("Mức lương chính thức của nhân viên được trả la: 10 trieu.");
-        printf("Luong thang thu 13 la: %d", luongThang13(10000000, 0,3));
+        luongThang13 = luong;
+        printf("Luong thang thu 13 la: %d ", luongThang13(10000000, 0.3));
     } else if (a < 2 && b >= 1 && b <= 2){
+        printf("Mức lương chính thức của nhân viên được trả la: 10 trieu.");
+        luongThang13 = luong;
+        printf("Luong thang thu 13 la: %d", luongThang13(10000000, 0.5));
+    } else if (2 <= a && a <= 5 && b >2 && b <= 5){
         printf("Mức lương chính thức của nhân viên được trả la: 20 trieu.");
-        printf("Luong thang thu 13 la: %d", luongThang13(10000000, 0,5));
-    } else if (2 <= a && a < 5 && b >2 && b <= 5){
-        printf("Mức lương chính thức của nhân viên được trả la: 20 trieu.");
+        luongThang13 = luong;
         printf("Luong thang thu 13 la: %d", luongThang13(20000000, 1));
     } else if (a > 5 && b > 5 ){
-        printf("Mức lương chính thức của nhân viên được trả la: 50 trieu.");
-        printf("Luong thang thu 13 la: %d", luongThang13(10000000, 2));
+        printf("Mức lương chính thức của nhân viên được trả la: 30 trieu.");
+        luongThang13 = luong;
+        printf("Luong thang thu 13 la: %d", luongThang13(30000000, 2));
     }
 
     return 0;
