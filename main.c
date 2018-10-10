@@ -59,7 +59,7 @@ int main() {
     }
     char luachon;
     if (luachon == 'n' || luachon == 'N') {
-        printf("Thoát chương trình");
+        exit(1);
     }
     return 0;
 }
